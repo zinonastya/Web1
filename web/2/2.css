@@ -1,0 +1,11 @@
+body {
+    text-indent: 5%; /* Отступ первой строки в процентах */
+    font-size:120%;
+    color:#66cdaa;
+    text-align:justify
+    
+   }
+ h1 {
+ 	color:#00BFFF;
+   }
+ 

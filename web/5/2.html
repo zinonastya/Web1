@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Лаба 5</title>
+<script>
+function sizePic() {
+size = document.getElementById("size").value;
+img = document.getElementById("pic");
+img.width = 210 + 10*size;
+}
+function show() { 
+document.getElementById('info').style.display='none'; 
+} 
+function hide() { 
+document.getElementById('info').style.display='block'; 
+}
+function Complete()
+{
+var Elem="Привет, " + document.form.Name.value;
+alert(Elem);
+}
+function btnClick()
+{
+var Txt1 = "";
+var Txt2 = "";
+Txt1 = document.form.Name.value;
+Txt2 = document.form.email.value;
+document.getElementById('ex1').innerHTML="<HR>"+
+"Вы нажали бесполезную кнопку! Вы наш герой, " + Txt1.bold() + "."+
+" Мы с вами свяжемся через почту " + Txt2.bold() + "<HR>";
+document.getElementById("ex1").style.color = document.getElementById("color").value;
+}
+
+</script>
+
+<link rel="stylesheet" href="s.css" type="text/css">
+</head>
+<body>
+<header>
+<h1>Добро пожаловать!</h1>
+</header>
+<form name="form">
+<p><label for="Name" onBlur="this.value=this.value()">Имя</label></p>
+<p><input type="text" id="Name" required autofocus></p>
+<p><label for="email">Почта</label></p>
+<p><input type="email" placeholder="user@mail.com" id="email" required></p>
+
+<label for="date"> Дата рождения:</label>
+<input type="date" id="date" name="date">
+<p>Укажите цвет текста: <input type="color" id="color" name="bg" value="#ff0000"></p>
+
+<fieldset><legend>Какой вид спорта вам подходит больше всего?</legend>
+<input type="checkbox" onclick="if (checked) hide(); else show()"> Футбол<br>
+<div id="info" style="display:none">
+<label><input name="check" type="radio" />Классический</label><br> 
+<label><input name="check" type="radio" />Американский</label><br>
+</div>
+<input type="checkbox"> Хоккей<br>
+<input type="checkbox"> Баскетбол<br>
+<input type="checkbox"> Волейбол<br>
+</fieldset>
+<br>
+<input type="submit" value="Получить привет!" onClick="Complete();"/>
+<input type="reset" value="Сброс">
+<INPUT TYPE="button" NAME="bt" VALUE="Щелкни здесь!"
+onClick="btnClick();">
+</form>
+
+<div id="ex1"></div>
+
+<p>Размер рисунка: <input type="range" min="1" max="5" id="size"
+oninput="sizePic()" value="3"></p>
+<p><img src="file:///home/lena/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/web/1.png" alt="" id="pic"></p>
+
+
+
+</body>
+</html>

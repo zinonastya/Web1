@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег FIELDSET</title>
+  <style>
+    fieldset{ background:  white; padding: 10px; margin-right: 20%; margin-left: 20%}
+    .p{
+      font-size: 500%;
+    }
+  </style>
+ </head>
+ <body>  
+ <form name="form1" onsubmit="return false">
+  <fieldset>
+   <p><strong>Введите Ваше имя:</strong> <input name="name1" type="text" placeholder="Иван" maxlength="25" id="inpname" size="40" required autofocus></p>
+   <p><strong>Введите Ваш e-mail:</strong> <input name="email1" type="email" placeholder="user@gmail.com" maxlength="25" id="inpemail" size="40" required >
+   <p><strong>Введите Ваш адрес:</strong> <input name="url1" type="url" placeholder="https://www.google.ru" maxlength="25" id="inpurl" size="40" required ></p>
+   <p><strong>Номер телефона</strong> <input name="phone" type="text" pattern="(\+7|8)9[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="+79999999999"></p>
+   <p><strong>Введите дату рождения:</strong><input type="date">
+   <p><strong>Выберите цвет:</strong><input type="color"  id="col" onchange="newcolor()">
+
+   <p><strong>Размер рисунка:</strong> <input type="range" min="1" max="16" value="16" id="size" oninput="sizePic()" value="3"></p>
+   <img  src="C:/Users/Asus/Desktop/web/4/11.png" alt="" id="pic">
+
+  
+  <P>Вы любите музыку?</P>
+   <p><input id="myRadioButton1" type="radio" name="radiobutton" value="radiobutton" onChange="hide()">Да
+   <input id="myRadioButton2" type="radio" name="radiobutton" value="radiobutton" onChange="show()">Нет
+<div id="info" style="display:none">
+       <label><input name="checkbox_sure" type="checkbox" />Классическую</label><br>
+     <label><input name="checkbox_sure" type="checkbox" />Современную</label><br>
+       </div>
+              <p><input type="submit" onclick="ret()"></p>
+              <a href="C:/Users/Asus/Desktop/web/6/1.html">Тест</a></p>
+  </fieldset>
+ </form> 
+  <script>
+    function ret() {
+   if (( document.form1.name1.value == "" ) || ( document.form1.email1.value == "" ) ||
+            ( document.form1.url1.value == "" ))
+        {
+            alert('Заполните все обязательные поля!');
+        } else {
+          var fname = document.getElementById('inpname').value;
+          var html = 'Благодарим!' + fname+'!';
+            alert(html);
+        }
+        return false;
+    }
+    function show() {
+        document.getElementById('info').style.display='none';
+    }
+    function hide() {
+        document.getElementById('info').style.display='block';
+        
+    }
+   function sizePic() {
+    size = document.getElementById("size").value;
+    img = document.getElementById("pic");
+    img.width = 60 + 20*size;
+  }
+
+  function newcolor() {
+   document.bgColor=document.getElementById("col").value
+  }
+  </script>
+
+ </body>
+</html>

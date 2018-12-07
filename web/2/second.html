@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Square Dance</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="C:/Users/Asus/Desktop/web/2/2.css" type="text/css"/>
+<link href="mystl.css" rel="stylesheet">
+<style>
+p{
+	 text-indent: 5%; /* Отступ первой строки в процентах */
+    font-size:100%;
+    text-align:justify
+}
+.p11{ /* Селектор класса */
+	text-indent: 0%; /* Отступ первой строки в процентах */
+    font-size:100%;
+    text-align:justify
+}
+.ul{ /* Селектор класса */
+	color: #66cdaa;
+}
+li:before { /* псевдоэлемент для добавления ❉ перед li*/
+     content: "❉ "; /* Добавляем желаемый символ перед элементом списка */ 
+     color:#00BFFF;
+   }
+   li {
+     list-style: none; /* Убираем исходные маркеры */ 
+   }
+
+ li:first-child { /* псевдокласс Первый ребёнок фоном выделяется*/
+
+  	background: greenyellow; 
+}
+
+li:nth-child(2) { /* псевдокласс 2 ребёнок фоном выделяется*/
+ 	background: gold; 
+}
+li:nth-child(3) { /* псевдокласс 2 ребёнок фоном выделяется*/
+		background: lightsalmon; 
+	}
+li:nth-child(4) { /* псевдокласс 4 ребёнок фоном выделяется*/
+		background: #1E90FF; 
+	}
+
+</style>
+</head>
+ <body>
+ 	<p><a name= "top"></a></p>
+ <h1>Фигуры Square Dance</h1>
+  <p>Фигуры сквэр-данса различаются по степени сложности. Для
+удобства они разделены на несколько уровней или программ. </p>
+<p class ="p11">Уровни Square Dance</p>
+ <ul class ="ul1">
+	<li>Мейнстрим (Mainstream)</li>
+ 	<li>Плюс (Plus)</li>
+ 	<li>Advanced
+ 		<ul>
+ 	 		<li>A-1</li>
+ 			 <li>A-2</li>
+   		 </ul>
+	</li>
+ 	 <li>Challenge
+ 	<ul>
+ 	 <li>C1</li>
+ 	 <li>C2</li>
+ 	 <li>C3A</li>
+	</ul>
+	</li>
+</ul>
+<a href="mailto:zinonastya98@gmail.com?subject=SquareDance">Задавайте вопросы по электронной почте </a>
+
+ </body>
+</html>
